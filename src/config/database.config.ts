@@ -3,7 +3,9 @@ import * as dotenv from 'dotenv';
 
 const dotenv_path = path.resolve(process.cwd(), `.db.env`);
 const result = dotenv.config({ path: dotenv_path });
-if (result.error) { /* do nothing */ }
+if (result.error) {
+  /* do nothing */
+}
 
 export const DatabaseConfig = {
   type: 'mysql' as any,
@@ -15,9 +17,9 @@ export const DatabaseConfig = {
   host: process.env.TYPEORM_HOST,
   synchronize: false,
   migrationsRun: false,
-  entities: ["dist/**/*.entity{.ts,.js}"],
-  migrations: ["dist/migrations/**/*{.ts,.js}"],
-  cli: { "migrationsDir": "src/migrations" }
-}
+  entities: ['dist/**/*.entity{.ts,.js}'],
+  migrations: ['dist/migrations/**/*{.ts,.js}'],
+  cli: { migrationsDir: 'src/migrations' },
+};
 
 export default DatabaseConfig;

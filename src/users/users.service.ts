@@ -8,5 +8,5 @@ export class UsersService {
   constructor(
     @InjectRepository(User)
     private readonly usersRepository: Repository<User>,
-  ) { }
+  ) {}
 }

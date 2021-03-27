@@ -7,10 +7,7 @@ import { UsersModule } from './users/users.module';
 import DatabaseConfig from './config/database.config';
 
 @Module({
-  imports: [
-    TypeOrmModule.forRoot(DatabaseConfig),
-    UsersModule,
-  ],
+  imports: [TypeOrmModule.forRoot(DatabaseConfig), UsersModule],
   controllers: [AppController],
   providers: [AppService, UsersService],
 })
