@@ -26,7 +26,7 @@ export class User {
   name: string;
 
   @Column()
-  isAdmin = false;
+  isAdmin: boolean = false;
 
   @CreateDateColumn()
   updatedAt: Date;
